@@ -612,6 +612,42 @@ struct TestInteger : CppUnit::TestFixture {
             CPPUNIT_ASSERT(x == 2340);}
         catch (std::invalid_argument& e) {
             CPPUNIT_ASSERT(false);}}
+
+
+    // ---
+    // mod equals
+    // ---
+    void test_mod_equals1() {
+        try {
+            Integer<int> x("234");
+            x %= 100;
+            CPPUNIT_ASSERT(x == 34);}
+        catch (std::invalid_argument& e) {
+            CPPUNIT_ASSERT(false);}}
+
+    void test_mod_equals2() {
+        try {
+            Integer<int> x("234");
+            x %= 117;
+            CPPUNIT_ASSERT(x == 0);}
+        catch (std::invalid_argument& e) {
+            CPPUNIT_ASSERT(false);}}
+
+    void test_mod_equals3() {
+        try {
+            Integer<int> x("-234");
+            x %= 100;
+            CPPUNIT_ASSERT(x == 66);}
+        catch (std::invalid_argument& e) {
+            CPPUNIT_ASSERT(false);}}
+
+    void test_mod_equals4() {
+        try {
+            Integer<int> x("-234");
+            x %= 117;
+            CPPUNIT_ASSERT(x == 0);}
+        catch (std::invalid_argument& e) {
+            CPPUNIT_ASSERT(false);}}
     // ---
     // pow
     // ---
@@ -713,6 +749,10 @@ struct TestInteger : CppUnit::TestFixture {
     CPPUNIT_TEST(test_shift_right_equals1);
     CPPUNIT_TEST(test_shift_right_equals2);
     CPPUNIT_TEST(test_shift_right_equals3);
+    CPPUNIT_TEST(test_mod_equals1);
+    CPPUNIT_TEST(test_mod_equals2);
+    CPPUNIT_TEST(test_mod_equals3);
+    CPPUNIT_TEST(test_mod_equals4);
     CPPUNIT_TEST(test_pow_1);
     CPPUNIT_TEST(test_pow_2);
     CPPUNIT_TEST(test_pow_3);
