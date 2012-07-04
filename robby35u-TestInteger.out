@@ -1,0 +1,974 @@
+==19509== Memcheck, a memory error detector
+==19509== Copyright (C) 2002-2009, and GNU GPL'd, by Julian Seward et al.
+==19509== Using Valgrind-3.6.0.SVN-Debian and LibVEX; rerun with -h for copyright info
+==19509== Command: TestInteger.c++.app
+==19509== 
+TestInteger.c++
+
+.....................len1: 3 tempProd.size(): 4
+len1: 3 tempProd.size(): 4
+len1: 3 tempProd.size(): 4
+len1: 3 tempProd.size(): 4
+len1: 3 tempProd.size(): 4
+len1: 3 tempProd.size(): 4
+len1: 3 tempProd.size(): 4
+len1: 3 tempProd.size(): 4
+len1: 3 tempProd.size(): 4
+==19509== Invalid read of size 4
+==19509==    at 0x4364A3: int* multiplies_digits<int const*, int const*, int*>(int const*, int const*, int const*, int const*, int*) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x409EA1: TestInteger::test_multiplies_digits() (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x440F23: CppUnit::TestCaller<TestInteger>::runTest() (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x50568E9: CppUnit::TestCaseMethodFunctor::operator()() const (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5049E33: CppUnit::DefaultProtector::protect(CppUnit::Functor const&, CppUnit::ProtectorContext const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5052E66: CppUnit::ProtectorChain::protect(CppUnit::Functor const&, CppUnit::ProtectorContext const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x505D593: CppUnit::TestResult::protect(CppUnit::Functor const&, CppUnit::Test*, std::string const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5056687: CppUnit::TestCase::run(CppUnit::TestResult*) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5056DC2: CppUnit::TestComposite::doRunChildTests(CppUnit::TestResult*) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5056CE5: CppUnit::TestComposite::run(CppUnit::TestResult*) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x505D1B9: CppUnit::TestResult::runTest(CppUnit::Test*) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x505F5E2: CppUnit::TestRunner::run(CppUnit::TestResult&, std::string const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==  Address 0x5df076c is 4 bytes before a block of size 24 alloc'd
+==19509==    at 0x4C27CC1: operator new(unsigned long) (vg_replace_malloc.c:261)
+==19509==    by 0x43FA60: __gnu_cxx::new_allocator<int>::allocate(unsigned long, void const*) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x43E704: std::_Vector_base<int, std::allocator<int> >::_M_allocate(unsigned long) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x43C72E: std::_Vector_base<int, std::allocator<int> >::_Vector_base(unsigned long, std::allocator<int> const&) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x43A3CB: std::vector<int, std::allocator<int> >::vector(unsigned long, int const&, std::allocator<int> const&) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x436183: int* multiplies_digits<int const*, int const*, int*>(int const*, int const*, int const*, int const*, int*) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x409EA1: TestInteger::test_multiplies_digits() (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x440F23: CppUnit::TestCaller<TestInteger>::runTest() (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x50568E9: CppUnit::TestCaseMethodFunctor::operator()() const (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5049E33: CppUnit::DefaultProtector::protect(CppUnit::Functor const&, CppUnit::ProtectorContext const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5052E66: CppUnit::ProtectorChain::protect(CppUnit::Functor const&, CppUnit::ProtectorContext const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x505D593: CppUnit::TestResult::protect(CppUnit::Functor const&, CppUnit::Test*, std::string const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509== 
+==19509== Invalid write of size 4
+==19509==    at 0x4364A8: int* multiplies_digits<int const*, int const*, int*>(int const*, int const*, int const*, int const*, int*) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x409EA1: TestInteger::test_multiplies_digits() (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x440F23: CppUnit::TestCaller<TestInteger>::runTest() (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x50568E9: CppUnit::TestCaseMethodFunctor::operator()() const (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5049E33: CppUnit::DefaultProtector::protect(CppUnit::Functor const&, CppUnit::ProtectorContext const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5052E66: CppUnit::ProtectorChain::protect(CppUnit::Functor const&, CppUnit::ProtectorContext const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x505D593: CppUnit::TestResult::protect(CppUnit::Functor const&, CppUnit::Test*, std::string const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5056687: CppUnit::TestCase::run(CppUnit::TestResult*) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5056DC2: CppUnit::TestComposite::doRunChildTests(CppUnit::TestResult*) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5056CE5: CppUnit::TestComposite::run(CppUnit::TestResult*) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x505D1B9: CppUnit::TestResult::runTest(CppUnit::Test*) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x505F5E2: CppUnit::TestRunner::run(CppUnit::TestResult&, std::string const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==  Address 0x5df076c is 4 bytes before a block of size 24 alloc'd
+==19509==    at 0x4C27CC1: operator new(unsigned long) (vg_replace_malloc.c:261)
+==19509==    by 0x43FA60: __gnu_cxx::new_allocator<int>::allocate(unsigned long, void const*) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x43E704: std::_Vector_base<int, std::allocator<int> >::_M_allocate(unsigned long) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x43C72E: std::_Vector_base<int, std::allocator<int> >::_Vector_base(unsigned long, std::allocator<int> const&) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x43A3CB: std::vector<int, std::allocator<int> >::vector(unsigned long, int const&, std::allocator<int> const&) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x436183: int* multiplies_digits<int const*, int const*, int*>(int const*, int const*, int const*, int const*, int*) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x409EA1: TestInteger::test_multiplies_digits() (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x440F23: CppUnit::TestCaller<TestInteger>::runTest() (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x50568E9: CppUnit::TestCaseMethodFunctor::operator()() const (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5049E33: CppUnit::DefaultProtector::protect(CppUnit::Functor const&, CppUnit::ProtectorContext const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5052E66: CppUnit::ProtectorChain::protect(CppUnit::Functor const&, CppUnit::ProtectorContext const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x505D593: CppUnit::TestResult::protect(CppUnit::Functor const&, CppUnit::Test*, std::string const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509== 
+.len1: 3 tempProd.size(): 4
+len1: 3 tempProd.size(): 4
+len1: 3 tempProd.size(): 4
+len1: 3 tempProd.size(): 4
+len1: 3 tempProd.size(): 4
+len1: 3 tempProd.size(): 4
+len1: 3 tempProd.size(): 4
+len1: 3 tempProd.size(): 4
+len1: 3 tempProd.size(): 4
+==19509== Invalid read of size 4
+==19509==    at 0x4369D1: int* multiplies_digits<__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, int*>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, int*) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x40A4D9: TestInteger::test_multiplies_digits_1() (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x440F23: CppUnit::TestCaller<TestInteger>::runTest() (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x50568E9: CppUnit::TestCaseMethodFunctor::operator()() const (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5049E33: CppUnit::DefaultProtector::protect(CppUnit::Functor const&, CppUnit::ProtectorContext const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5052E66: CppUnit::ProtectorChain::protect(CppUnit::Functor const&, CppUnit::ProtectorContext const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x505D593: CppUnit::TestResult::protect(CppUnit::Functor const&, CppUnit::Test*, std::string const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5056687: CppUnit::TestCase::run(CppUnit::TestResult*) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5056DC2: CppUnit::TestComposite::doRunChildTests(CppUnit::TestResult*) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5056CE5: CppUnit::TestComposite::run(CppUnit::TestResult*) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x505D1B9: CppUnit::TestResult::runTest(CppUnit::Test*) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x505F5E2: CppUnit::TestRunner::run(CppUnit::TestResult&, std::string const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==  Address 0x5df27bc is 4 bytes before a block of size 24 alloc'd
+==19509==    at 0x4C27CC1: operator new(unsigned long) (vg_replace_malloc.c:261)
+==19509==    by 0x43FA60: __gnu_cxx::new_allocator<int>::allocate(unsigned long, void const*) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x43E704: std::_Vector_base<int, std::allocator<int> >::_M_allocate(unsigned long) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x43C72E: std::_Vector_base<int, std::allocator<int> >::_Vector_base(unsigned long, std::allocator<int> const&) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x43A3CB: std::vector<int, std::allocator<int> >::vector(unsigned long, int const&, std::allocator<int> const&) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x4366A2: int* multiplies_digits<__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, int*>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, int*) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x40A4D9: TestInteger::test_multiplies_digits_1() (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x440F23: CppUnit::TestCaller<TestInteger>::runTest() (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x50568E9: CppUnit::TestCaseMethodFunctor::operator()() const (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5049E33: CppUnit::DefaultProtector::protect(CppUnit::Functor const&, CppUnit::ProtectorContext const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5052E66: CppUnit::ProtectorChain::protect(CppUnit::Functor const&, CppUnit::ProtectorContext const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x505D593: CppUnit::TestResult::protect(CppUnit::Functor const&, CppUnit::Test*, std::string const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509== 
+==19509== Invalid write of size 4
+==19509==    at 0x4369D6: int* multiplies_digits<__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, int*>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, int*) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x40A4D9: TestInteger::test_multiplies_digits_1() (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x440F23: CppUnit::TestCaller<TestInteger>::runTest() (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x50568E9: CppUnit::TestCaseMethodFunctor::operator()() const (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5049E33: CppUnit::DefaultProtector::protect(CppUnit::Functor const&, CppUnit::ProtectorContext const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5052E66: CppUnit::ProtectorChain::protect(CppUnit::Functor const&, CppUnit::ProtectorContext const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x505D593: CppUnit::TestResult::protect(CppUnit::Functor const&, CppUnit::Test*, std::string const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5056687: CppUnit::TestCase::run(CppUnit::TestResult*) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5056DC2: CppUnit::TestComposite::doRunChildTests(CppUnit::TestResult*) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5056CE5: CppUnit::TestComposite::run(CppUnit::TestResult*) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x505D1B9: CppUnit::TestResult::runTest(CppUnit::Test*) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x505F5E2: CppUnit::TestRunner::run(CppUnit::TestResult&, std::string const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==  Address 0x5df27bc is 4 bytes before a block of size 24 alloc'd
+==19509==    at 0x4C27CC1: operator new(unsigned long) (vg_replace_malloc.c:261)
+==19509==    by 0x43FA60: __gnu_cxx::new_allocator<int>::allocate(unsigned long, void const*) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x43E704: std::_Vector_base<int, std::allocator<int> >::_M_allocate(unsigned long) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x43C72E: std::_Vector_base<int, std::allocator<int> >::_Vector_base(unsigned long, std::allocator<int> const&) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x43A3CB: std::vector<int, std::allocator<int> >::vector(unsigned long, int const&, std::allocator<int> const&) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x4366A2: int* multiplies_digits<__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, int*>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, int*) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x40A4D9: TestInteger::test_multiplies_digits_1() (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x440F23: CppUnit::TestCaller<TestInteger>::runTest() (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x50568E9: CppUnit::TestCaseMethodFunctor::operator()() const (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5049E33: CppUnit::DefaultProtector::protect(CppUnit::Functor const&, CppUnit::ProtectorContext const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5052E66: CppUnit::ProtectorChain::protect(CppUnit::Functor const&, CppUnit::ProtectorContext const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x505D593: CppUnit::TestResult::protect(CppUnit::Functor const&, CppUnit::Test*, std::string const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509== 
+.len1: 3 tempProd.size(): 4
+len1: 3 tempProd.size(): 4
+len1: 3 tempProd.size(): 4
+len1: 3 tempProd.size(): 4
+len1: 3 tempProd.size(): 4
+len1: 3 tempProd.size(): 4
+len1: 3 tempProd.size(): 4
+len1: 3 tempProd.size(): 4
+len1: 3 tempProd.size(): 4
+==19509== Invalid read of size 4
+==19509==    at 0x436FE8: int* multiplies_digits<std::_Deque_iterator<int, int&, int*>, std::_Deque_iterator<int, int&, int*>, int*>(std::_Deque_iterator<int, int&, int*>, std::_Deque_iterator<int, int&, int*>, std::_Deque_iterator<int, int&, int*>, std::_Deque_iterator<int, int&, int*>, int*) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x40AC02: TestInteger::test_multiplies_digits_2() (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x440F23: CppUnit::TestCaller<TestInteger>::runTest() (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x50568E9: CppUnit::TestCaseMethodFunctor::operator()() const (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5049E33: CppUnit::DefaultProtector::protect(CppUnit::Functor const&, CppUnit::ProtectorContext const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5052E66: CppUnit::ProtectorChain::protect(CppUnit::Functor const&, CppUnit::ProtectorContext const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x505D593: CppUnit::TestResult::protect(CppUnit::Functor const&, CppUnit::Test*, std::string const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5056687: CppUnit::TestCase::run(CppUnit::TestResult*) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5056DC2: CppUnit::TestComposite::doRunChildTests(CppUnit::TestResult*) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5056CE5: CppUnit::TestComposite::run(CppUnit::TestResult*) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x505D1B9: CppUnit::TestResult::runTest(CppUnit::Test*) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x505F5E2: CppUnit::TestRunner::run(CppUnit::TestResult&, std::string const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==  Address 0x5df4d3c is 4 bytes before a block of size 24 alloc'd
+==19509==    at 0x4C27CC1: operator new(unsigned long) (vg_replace_malloc.c:261)
+==19509==    by 0x43FA60: __gnu_cxx::new_allocator<int>::allocate(unsigned long, void const*) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x43E704: std::_Vector_base<int, std::allocator<int> >::_M_allocate(unsigned long) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x43C72E: std::_Vector_base<int, std::allocator<int> >::_Vector_base(unsigned long, std::allocator<int> const&) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x43A3CB: std::vector<int, std::allocator<int> >::vector(unsigned long, int const&, std::allocator<int> const&) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x436C34: int* multiplies_digits<std::_Deque_iterator<int, int&, int*>, std::_Deque_iterator<int, int&, int*>, int*>(std::_Deque_iterator<int, int&, int*>, std::_Deque_iterator<int, int&, int*>, std::_Deque_iterator<int, int&, int*>, std::_Deque_iterator<int, int&, int*>, int*) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x40AC02: TestInteger::test_multiplies_digits_2() (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x440F23: CppUnit::TestCaller<TestInteger>::runTest() (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x50568E9: CppUnit::TestCaseMethodFunctor::operator()() const (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5049E33: CppUnit::DefaultProtector::protect(CppUnit::Functor const&, CppUnit::ProtectorContext const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5052E66: CppUnit::ProtectorChain::protect(CppUnit::Functor const&, CppUnit::ProtectorContext const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x505D593: CppUnit::TestResult::protect(CppUnit::Functor const&, CppUnit::Test*, std::string const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509== 
+==19509== Invalid write of size 4
+==19509==    at 0x436FED: int* multiplies_digits<std::_Deque_iterator<int, int&, int*>, std::_Deque_iterator<int, int&, int*>, int*>(std::_Deque_iterator<int, int&, int*>, std::_Deque_iterator<int, int&, int*>, std::_Deque_iterator<int, int&, int*>, std::_Deque_iterator<int, int&, int*>, int*) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x40AC02: TestInteger::test_multiplies_digits_2() (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x440F23: CppUnit::TestCaller<TestInteger>::runTest() (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x50568E9: CppUnit::TestCaseMethodFunctor::operator()() const (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5049E33: CppUnit::DefaultProtector::protect(CppUnit::Functor const&, CppUnit::ProtectorContext const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5052E66: CppUnit::ProtectorChain::protect(CppUnit::Functor const&, CppUnit::ProtectorContext const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x505D593: CppUnit::TestResult::protect(CppUnit::Functor const&, CppUnit::Test*, std::string const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5056687: CppUnit::TestCase::run(CppUnit::TestResult*) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5056DC2: CppUnit::TestComposite::doRunChildTests(CppUnit::TestResult*) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5056CE5: CppUnit::TestComposite::run(CppUnit::TestResult*) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x505D1B9: CppUnit::TestResult::runTest(CppUnit::Test*) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x505F5E2: CppUnit::TestRunner::run(CppUnit::TestResult&, std::string const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==  Address 0x5df4d3c is 4 bytes before a block of size 24 alloc'd
+==19509==    at 0x4C27CC1: operator new(unsigned long) (vg_replace_malloc.c:261)
+==19509==    by 0x43FA60: __gnu_cxx::new_allocator<int>::allocate(unsigned long, void const*) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x43E704: std::_Vector_base<int, std::allocator<int> >::_M_allocate(unsigned long) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x43C72E: std::_Vector_base<int, std::allocator<int> >::_Vector_base(unsigned long, std::allocator<int> const&) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x43A3CB: std::vector<int, std::allocator<int> >::vector(unsigned long, int const&, std::allocator<int> const&) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x436C34: int* multiplies_digits<std::_Deque_iterator<int, int&, int*>, std::_Deque_iterator<int, int&, int*>, int*>(std::_Deque_iterator<int, int&, int*>, std::_Deque_iterator<int, int&, int*>, std::_Deque_iterator<int, int&, int*>, std::_Deque_iterator<int, int&, int*>, int*) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x40AC02: TestInteger::test_multiplies_digits_2() (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x440F23: CppUnit::TestCaller<TestInteger>::runTest() (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x50568E9: CppUnit::TestCaseMethodFunctor::operator()() const (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5049E33: CppUnit::DefaultProtector::protect(CppUnit::Functor const&, CppUnit::ProtectorContext const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5052E66: CppUnit::ProtectorChain::protect(CppUnit::Functor const&, CppUnit::ProtectorContext const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x505D593: CppUnit::TestResult::protect(CppUnit::Functor const&, CppUnit::Test*, std::string const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509== 
+.len1: 4 tempProd.size(): 5
+len1: 4 tempProd.size(): 5
+len1: 4 tempProd.size(): 5
+len1: 4 tempProd.size(): 5
+len1: 4 tempProd.size(): 5
+len1: 4 tempProd.size(): 5
+len1: 4 tempProd.size(): 5
+len1: 4 tempProd.size(): 5
+len1: 4 tempProd.size(): 5
+==19509== Invalid read of size 4
+==19509==    at 0x4364A3: int* multiplies_digits<int const*, int const*, int*>(int const*, int const*, int const*, int const*, int*) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x40B1D3: TestInteger::test_multiplies_digits_3() (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x440F23: CppUnit::TestCaller<TestInteger>::runTest() (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x50568E9: CppUnit::TestCaseMethodFunctor::operator()() const (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5049E33: CppUnit::DefaultProtector::protect(CppUnit::Functor const&, CppUnit::ProtectorContext const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5052E66: CppUnit::ProtectorChain::protect(CppUnit::Functor const&, CppUnit::ProtectorContext const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x505D593: CppUnit::TestResult::protect(CppUnit::Functor const&, CppUnit::Test*, std::string const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5056687: CppUnit::TestCase::run(CppUnit::TestResult*) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5056DC2: CppUnit::TestComposite::doRunChildTests(CppUnit::TestResult*) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5056CE5: CppUnit::TestComposite::run(CppUnit::TestResult*) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x505D1B9: CppUnit::TestResult::runTest(CppUnit::Test*) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x505F5E2: CppUnit::TestRunner::run(CppUnit::TestResult&, std::string const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==  Address 0x5df6a7c is 4 bytes before a block of size 28 alloc'd
+==19509==    at 0x4C27CC1: operator new(unsigned long) (vg_replace_malloc.c:261)
+==19509==    by 0x43FA60: __gnu_cxx::new_allocator<int>::allocate(unsigned long, void const*) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x43E704: std::_Vector_base<int, std::allocator<int> >::_M_allocate(unsigned long) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x43C72E: std::_Vector_base<int, std::allocator<int> >::_Vector_base(unsigned long, std::allocator<int> const&) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x43A3CB: std::vector<int, std::allocator<int> >::vector(unsigned long, int const&, std::allocator<int> const&) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x436183: int* multiplies_digits<int const*, int const*, int*>(int const*, int const*, int const*, int const*, int*) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x40B1D3: TestInteger::test_multiplies_digits_3() (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x440F23: CppUnit::TestCaller<TestInteger>::runTest() (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x50568E9: CppUnit::TestCaseMethodFunctor::operator()() const (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5049E33: CppUnit::DefaultProtector::protect(CppUnit::Functor const&, CppUnit::ProtectorContext const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5052E66: CppUnit::ProtectorChain::protect(CppUnit::Functor const&, CppUnit::ProtectorContext const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x505D593: CppUnit::TestResult::protect(CppUnit::Functor const&, CppUnit::Test*, std::string const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509== 
+==19509== Invalid write of size 4
+==19509==    at 0x4364A8: int* multiplies_digits<int const*, int const*, int*>(int const*, int const*, int const*, int const*, int*) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x40B1D3: TestInteger::test_multiplies_digits_3() (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x440F23: CppUnit::TestCaller<TestInteger>::runTest() (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x50568E9: CppUnit::TestCaseMethodFunctor::operator()() const (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5049E33: CppUnit::DefaultProtector::protect(CppUnit::Functor const&, CppUnit::ProtectorContext const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5052E66: CppUnit::ProtectorChain::protect(CppUnit::Functor const&, CppUnit::ProtectorContext const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x505D593: CppUnit::TestResult::protect(CppUnit::Functor const&, CppUnit::Test*, std::string const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5056687: CppUnit::TestCase::run(CppUnit::TestResult*) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5056DC2: CppUnit::TestComposite::doRunChildTests(CppUnit::TestResult*) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5056CE5: CppUnit::TestComposite::run(CppUnit::TestResult*) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x505D1B9: CppUnit::TestResult::runTest(CppUnit::Test*) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x505F5E2: CppUnit::TestRunner::run(CppUnit::TestResult&, std::string const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==  Address 0x5df6a7c is 4 bytes before a block of size 28 alloc'd
+==19509==    at 0x4C27CC1: operator new(unsigned long) (vg_replace_malloc.c:261)
+==19509==    by 0x43FA60: __gnu_cxx::new_allocator<int>::allocate(unsigned long, void const*) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x43E704: std::_Vector_base<int, std::allocator<int> >::_M_allocate(unsigned long) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x43C72E: std::_Vector_base<int, std::allocator<int> >::_Vector_base(unsigned long, std::allocator<int> const&) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x43A3CB: std::vector<int, std::allocator<int> >::vector(unsigned long, int const&, std::allocator<int> const&) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x436183: int* multiplies_digits<int const*, int const*, int*>(int const*, int const*, int const*, int const*, int*) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x40B1D3: TestInteger::test_multiplies_digits_3() (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x440F23: CppUnit::TestCaller<TestInteger>::runTest() (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x50568E9: CppUnit::TestCaseMethodFunctor::operator()() const (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5049E33: CppUnit::DefaultProtector::protect(CppUnit::Functor const&, CppUnit::ProtectorContext const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5052E66: CppUnit::ProtectorChain::protect(CppUnit::Functor const&, CppUnit::ProtectorContext const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x505D593: CppUnit::TestResult::protect(CppUnit::Functor const&, CppUnit::Test*, std::string const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509== 
+.len1: 3 tempProd.size(): 4
+len1: 3 tempProd.size(): 4
+len1: 3 tempProd.size(): 4
+len1: 3 tempProd.size(): 4
+len1: 3 tempProd.size(): 4
+len1: 3 tempProd.size(): 4
+len1: 3 tempProd.size(): 4
+len1: 3 tempProd.size(): 4
+len1: 3 tempProd.size(): 4
+==19509== Invalid read of size 4
+==19509==    at 0x4364A3: int* multiplies_digits<int const*, int const*, int*>(int const*, int const*, int const*, int const*, int*) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x40B6E5: TestInteger::test_multiplies_digits_4() (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x440F23: CppUnit::TestCaller<TestInteger>::runTest() (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x50568E9: CppUnit::TestCaseMethodFunctor::operator()() const (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5049E33: CppUnit::DefaultProtector::protect(CppUnit::Functor const&, CppUnit::ProtectorContext const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5052E66: CppUnit::ProtectorChain::protect(CppUnit::Functor const&, CppUnit::ProtectorContext const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x505D593: CppUnit::TestResult::protect(CppUnit::Functor const&, CppUnit::Test*, std::string const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5056687: CppUnit::TestCase::run(CppUnit::TestResult*) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5056DC2: CppUnit::TestComposite::doRunChildTests(CppUnit::TestResult*) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5056CE5: CppUnit::TestComposite::run(CppUnit::TestResult*) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x505D1B9: CppUnit::TestResult::runTest(CppUnit::Test*) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x505F5E2: CppUnit::TestRunner::run(CppUnit::TestResult&, std::string const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==  Address 0x5df8b2c is 4 bytes before a block of size 28 alloc'd
+==19509==    at 0x4C27CC1: operator new(unsigned long) (vg_replace_malloc.c:261)
+==19509==    by 0x43FA60: __gnu_cxx::new_allocator<int>::allocate(unsigned long, void const*) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x43E704: std::_Vector_base<int, std::allocator<int> >::_M_allocate(unsigned long) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x43C72E: std::_Vector_base<int, std::allocator<int> >::_Vector_base(unsigned long, std::allocator<int> const&) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x43A3CB: std::vector<int, std::allocator<int> >::vector(unsigned long, int const&, std::allocator<int> const&) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x436183: int* multiplies_digits<int const*, int const*, int*>(int const*, int const*, int const*, int const*, int*) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x40B6E5: TestInteger::test_multiplies_digits_4() (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x440F23: CppUnit::TestCaller<TestInteger>::runTest() (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x50568E9: CppUnit::TestCaseMethodFunctor::operator()() const (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5049E33: CppUnit::DefaultProtector::protect(CppUnit::Functor const&, CppUnit::ProtectorContext const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5052E66: CppUnit::ProtectorChain::protect(CppUnit::Functor const&, CppUnit::ProtectorContext const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x505D593: CppUnit::TestResult::protect(CppUnit::Functor const&, CppUnit::Test*, std::string const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509== 
+==19509== Invalid write of size 4
+==19509==    at 0x4364A8: int* multiplies_digits<int const*, int const*, int*>(int const*, int const*, int const*, int const*, int*) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x40B6E5: TestInteger::test_multiplies_digits_4() (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x440F23: CppUnit::TestCaller<TestInteger>::runTest() (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x50568E9: CppUnit::TestCaseMethodFunctor::operator()() const (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5049E33: CppUnit::DefaultProtector::protect(CppUnit::Functor const&, CppUnit::ProtectorContext const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5052E66: CppUnit::ProtectorChain::protect(CppUnit::Functor const&, CppUnit::ProtectorContext const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x505D593: CppUnit::TestResult::protect(CppUnit::Functor const&, CppUnit::Test*, std::string const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5056687: CppUnit::TestCase::run(CppUnit::TestResult*) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5056DC2: CppUnit::TestComposite::doRunChildTests(CppUnit::TestResult*) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5056CE5: CppUnit::TestComposite::run(CppUnit::TestResult*) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x505D1B9: CppUnit::TestResult::runTest(CppUnit::Test*) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x505F5E2: CppUnit::TestRunner::run(CppUnit::TestResult&, std::string const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==  Address 0x5df8b2c is 4 bytes before a block of size 28 alloc'd
+==19509==    at 0x4C27CC1: operator new(unsigned long) (vg_replace_malloc.c:261)
+==19509==    by 0x43FA60: __gnu_cxx::new_allocator<int>::allocate(unsigned long, void const*) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x43E704: std::_Vector_base<int, std::allocator<int> >::_M_allocate(unsigned long) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x43C72E: std::_Vector_base<int, std::allocator<int> >::_Vector_base(unsigned long, std::allocator<int> const&) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x43A3CB: std::vector<int, std::allocator<int> >::vector(unsigned long, int const&, std::allocator<int> const&) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x436183: int* multiplies_digits<int const*, int const*, int*>(int const*, int const*, int const*, int const*, int*) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x40B6E5: TestInteger::test_multiplies_digits_4() (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x440F23: CppUnit::TestCaller<TestInteger>::runTest() (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x50568E9: CppUnit::TestCaseMethodFunctor::operator()() const (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5049E33: CppUnit::DefaultProtector::protect(CppUnit::Functor const&, CppUnit::ProtectorContext const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5052E66: CppUnit::ProtectorChain::protect(CppUnit::Functor const&, CppUnit::ProtectorContext const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x505D593: CppUnit::TestResult::protect(CppUnit::Functor const&, CppUnit::Test*, std::string const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509== 
+.len1: 5 tempProd.size(): 6
+==19509== Conditional jump or move depends on uninitialised value(s)
+==19509==    at 0x5302C96: std::ostreambuf_iterator<char, std::char_traits<char> > std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::_M_insert_int<long>(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, long) const (in /usr/lib/libstdc++.so.6.0.13)
+==19509==    by 0x5302F25: std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::do_put(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, long) const (in /usr/lib/libstdc++.so.6.0.13)
+==19509==    by 0x5315EFD: std::ostream& std::ostream::_M_insert<long>(long) (in /usr/lib/libstdc++.so.6.0.13)
+==19509==    by 0x40BBF5: TestInteger::test_multiplies_digits_5() (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x440F23: CppUnit::TestCaller<TestInteger>::runTest() (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x50568E9: CppUnit::TestCaseMethodFunctor::operator()() const (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5049E33: CppUnit::DefaultProtector::protect(CppUnit::Functor const&, CppUnit::ProtectorContext const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5052E66: CppUnit::ProtectorChain::protect(CppUnit::Functor const&, CppUnit::ProtectorContext const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x505D593: CppUnit::TestResult::protect(CppUnit::Functor const&, CppUnit::Test*, std::string const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5056687: CppUnit::TestCase::run(CppUnit::TestResult*) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5056DC2: CppUnit::TestComposite::doRunChildTests(CppUnit::TestResult*) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5056CE5: CppUnit::TestComposite::run(CppUnit::TestResult*) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509== 
+==19509== Use of uninitialised value of size 8
+==19509==    at 0x52FD4F3: ??? (in /usr/lib/libstdc++.so.6.0.13)
+==19509==    by 0x5302CC2: std::ostreambuf_iterator<char, std::char_traits<char> > std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::_M_insert_int<long>(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, long) const (in /usr/lib/libstdc++.so.6.0.13)
+==19509==    by 0x5302F25: std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::do_put(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, long) const (in /usr/lib/libstdc++.so.6.0.13)
+==19509==    by 0x5315EFD: std::ostream& std::ostream::_M_insert<long>(long) (in /usr/lib/libstdc++.so.6.0.13)
+==19509==    by 0x40BBF5: TestInteger::test_multiplies_digits_5() (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x440F23: CppUnit::TestCaller<TestInteger>::runTest() (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x50568E9: CppUnit::TestCaseMethodFunctor::operator()() const (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5049E33: CppUnit::DefaultProtector::protect(CppUnit::Functor const&, CppUnit::ProtectorContext const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5052E66: CppUnit::ProtectorChain::protect(CppUnit::Functor const&, CppUnit::ProtectorContext const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x505D593: CppUnit::TestResult::protect(CppUnit::Functor const&, CppUnit::Test*, std::string const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5056687: CppUnit::TestCase::run(CppUnit::TestResult*) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5056DC2: CppUnit::TestComposite::doRunChildTests(CppUnit::TestResult*) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509== 
+==19509== Conditional jump or move depends on uninitialised value(s)
+==19509==    at 0x52FD4FE: ??? (in /usr/lib/libstdc++.so.6.0.13)
+==19509==    by 0x5302CC2: std::ostreambuf_iterator<char, std::char_traits<char> > std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::_M_insert_int<long>(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, long) const (in /usr/lib/libstdc++.so.6.0.13)
+==19509==    by 0x5302F25: std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::do_put(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, long) const (in /usr/lib/libstdc++.so.6.0.13)
+==19509==    by 0x5315EFD: std::ostream& std::ostream::_M_insert<long>(long) (in /usr/lib/libstdc++.so.6.0.13)
+==19509==    by 0x40BBF5: TestInteger::test_multiplies_digits_5() (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x440F23: CppUnit::TestCaller<TestInteger>::runTest() (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x50568E9: CppUnit::TestCaseMethodFunctor::operator()() const (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5049E33: CppUnit::DefaultProtector::protect(CppUnit::Functor const&, CppUnit::ProtectorContext const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5052E66: CppUnit::ProtectorChain::protect(CppUnit::Functor const&, CppUnit::ProtectorContext const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x505D593: CppUnit::TestResult::protect(CppUnit::Functor const&, CppUnit::Test*, std::string const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5056687: CppUnit::TestCase::run(CppUnit::TestResult*) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5056DC2: CppUnit::TestComposite::doRunChildTests(CppUnit::TestResult*) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509== 
+==19509== Conditional jump or move depends on uninitialised value(s)
+==19509==    at 0x5302CF8: std::ostreambuf_iterator<char, std::char_traits<char> > std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::_M_insert_int<long>(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, long) const (in /usr/lib/libstdc++.so.6.0.13)
+==19509==    by 0x5302F25: std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::do_put(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, long) const (in /usr/lib/libstdc++.so.6.0.13)
+==19509==    by 0x5315EFD: std::ostream& std::ostream::_M_insert<long>(long) (in /usr/lib/libstdc++.so.6.0.13)
+==19509==    by 0x40BBF5: TestInteger::test_multiplies_digits_5() (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x440F23: CppUnit::TestCaller<TestInteger>::runTest() (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x50568E9: CppUnit::TestCaseMethodFunctor::operator()() const (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5049E33: CppUnit::DefaultProtector::protect(CppUnit::Functor const&, CppUnit::ProtectorContext const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5052E66: CppUnit::ProtectorChain::protect(CppUnit::Functor const&, CppUnit::ProtectorContext const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x505D593: CppUnit::TestResult::protect(CppUnit::Functor const&, CppUnit::Test*, std::string const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5056687: CppUnit::TestCase::run(CppUnit::TestResult*) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5056DC2: CppUnit::TestComposite::doRunChildTests(CppUnit::TestResult*) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5056CE5: CppUnit::TestComposite::run(CppUnit::TestResult*) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509== 
+1000017833
+...........................................len1: 5 tempProd.size(): 6
+len1: 5 tempProd.size(): 6
+len1: 5 tempProd.size(): 6
+len1: 5 tempProd.size(): 6
+len1: 5 tempProd.size(): 6
+len1: 5 tempProd.size(): 6
+len1: 5 tempProd.size(): 6
+len1: 5 tempProd.size(): 6
+len1: 5 tempProd.size(): 6
+==19509== Invalid read of size 4
+==19509==    at 0x43DB44: std::back_insert_iterator<std::vector<int, std::allocator<int> > > multiplies_digits<__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int const*, std::vector<int, std::allocator<int> > >, std::back_insert_iterator<std::vector<int, std::allocator<int> > > >(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int const*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int const*, std::vector<int, std::allocator<int> > >, std::back_insert_iterator<std::vector<int, std::allocator<int> > >) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x438B73: Integer<int, std::vector<int, std::allocator<int> > >::operator*=(Integer<int, std::vector<int, std::allocator<int> > > const&) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x419045: TestInteger::test_times_equals_1() (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x440F23: CppUnit::TestCaller<TestInteger>::runTest() (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x50568E9: CppUnit::TestCaseMethodFunctor::operator()() const (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5049E33: CppUnit::DefaultProtector::protect(CppUnit::Functor const&, CppUnit::ProtectorContext const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5052E66: CppUnit::ProtectorChain::protect(CppUnit::Functor const&, CppUnit::ProtectorContext const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x505D593: CppUnit::TestResult::protect(CppUnit::Functor const&, CppUnit::Test*, std::string const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5056687: CppUnit::TestCase::run(CppUnit::TestResult*) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5056DC2: CppUnit::TestComposite::doRunChildTests(CppUnit::TestResult*) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5056CE5: CppUnit::TestComposite::run(CppUnit::TestResult*) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x505D1B9: CppUnit::TestResult::runTest(CppUnit::Test*) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==  Address 0x5f2d1dc is 4 bytes before a block of size 36 alloc'd
+==19509==    at 0x4C27CC1: operator new(unsigned long) (vg_replace_malloc.c:261)
+==19509==    by 0x43FA60: __gnu_cxx::new_allocator<int>::allocate(unsigned long, void const*) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x43E704: std::_Vector_base<int, std::allocator<int> >::_M_allocate(unsigned long) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x43C72E: std::_Vector_base<int, std::allocator<int> >::_Vector_base(unsigned long, std::allocator<int> const&) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x43A3CB: std::vector<int, std::allocator<int> >::vector(unsigned long, int const&, std::allocator<int> const&) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x43D815: std::back_insert_iterator<std::vector<int, std::allocator<int> > > multiplies_digits<__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int const*, std::vector<int, std::allocator<int> > >, std::back_insert_iterator<std::vector<int, std::allocator<int> > > >(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int const*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int const*, std::vector<int, std::allocator<int> > >, std::back_insert_iterator<std::vector<int, std::allocator<int> > >) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x438B73: Integer<int, std::vector<int, std::allocator<int> > >::operator*=(Integer<int, std::vector<int, std::allocator<int> > > const&) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x419045: TestInteger::test_times_equals_1() (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x440F23: CppUnit::TestCaller<TestInteger>::runTest() (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x50568E9: CppUnit::TestCaseMethodFunctor::operator()() const (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5049E33: CppUnit::DefaultProtector::protect(CppUnit::Functor const&, CppUnit::ProtectorContext const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5052E66: CppUnit::ProtectorChain::protect(CppUnit::Functor const&, CppUnit::ProtectorContext const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509== 
+==19509== Invalid write of size 4
+==19509==    at 0x43DB49: std::back_insert_iterator<std::vector<int, std::allocator<int> > > multiplies_digits<__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int const*, std::vector<int, std::allocator<int> > >, std::back_insert_iterator<std::vector<int, std::allocator<int> > > >(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int const*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int const*, std::vector<int, std::allocator<int> > >, std::back_insert_iterator<std::vector<int, std::allocator<int> > >) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x438B73: Integer<int, std::vector<int, std::allocator<int> > >::operator*=(Integer<int, std::vector<int, std::allocator<int> > > const&) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x419045: TestInteger::test_times_equals_1() (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x440F23: CppUnit::TestCaller<TestInteger>::runTest() (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x50568E9: CppUnit::TestCaseMethodFunctor::operator()() const (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5049E33: CppUnit::DefaultProtector::protect(CppUnit::Functor const&, CppUnit::ProtectorContext const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5052E66: CppUnit::ProtectorChain::protect(CppUnit::Functor const&, CppUnit::ProtectorContext const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x505D593: CppUnit::TestResult::protect(CppUnit::Functor const&, CppUnit::Test*, std::string const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5056687: CppUnit::TestCase::run(CppUnit::TestResult*) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5056DC2: CppUnit::TestComposite::doRunChildTests(CppUnit::TestResult*) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5056CE5: CppUnit::TestComposite::run(CppUnit::TestResult*) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x505D1B9: CppUnit::TestResult::runTest(CppUnit::Test*) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==  Address 0x5f2d1dc is 4 bytes before a block of size 36 alloc'd
+==19509==    at 0x4C27CC1: operator new(unsigned long) (vg_replace_malloc.c:261)
+==19509==    by 0x43FA60: __gnu_cxx::new_allocator<int>::allocate(unsigned long, void const*) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x43E704: std::_Vector_base<int, std::allocator<int> >::_M_allocate(unsigned long) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x43C72E: std::_Vector_base<int, std::allocator<int> >::_Vector_base(unsigned long, std::allocator<int> const&) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x43A3CB: std::vector<int, std::allocator<int> >::vector(unsigned long, int const&, std::allocator<int> const&) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x43D815: std::back_insert_iterator<std::vector<int, std::allocator<int> > > multiplies_digits<__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int const*, std::vector<int, std::allocator<int> > >, std::back_insert_iterator<std::vector<int, std::allocator<int> > > >(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int const*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int const*, std::vector<int, std::allocator<int> > >, std::back_insert_iterator<std::vector<int, std::allocator<int> > >) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x438B73: Integer<int, std::vector<int, std::allocator<int> > >::operator*=(Integer<int, std::vector<int, std::allocator<int> > > const&) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x419045: TestInteger::test_times_equals_1() (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x440F23: CppUnit::TestCaller<TestInteger>::runTest() (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x50568E9: CppUnit::TestCaseMethodFunctor::operator()() const (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5049E33: CppUnit::DefaultProtector::protect(CppUnit::Functor const&, CppUnit::ProtectorContext const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5052E66: CppUnit::ProtectorChain::protect(CppUnit::Functor const&, CppUnit::ProtectorContext const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509== 
+.len1: 5 tempProd.size(): 6
+len1: 5 tempProd.size(): 6
+len1: 5 tempProd.size(): 6
+len1: 5 tempProd.size(): 6
+len1: 5 tempProd.size(): 6
+len1: 5 tempProd.size(): 6
+len1: 5 tempProd.size(): 6
+len1: 5 tempProd.size(): 6
+len1: 5 tempProd.size(): 6
+==19509== Invalid read of size 4
+==19509==    at 0x43DB44: std::back_insert_iterator<std::vector<int, std::allocator<int> > > multiplies_digits<__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int const*, std::vector<int, std::allocator<int> > >, std::back_insert_iterator<std::vector<int, std::allocator<int> > > >(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int const*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int const*, std::vector<int, std::allocator<int> > >, std::back_insert_iterator<std::vector<int, std::allocator<int> > >) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x438B73: Integer<int, std::vector<int, std::allocator<int> > >::operator*=(Integer<int, std::vector<int, std::allocator<int> > > const&) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x4197E9: TestInteger::test_times_equals_2() (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x440F23: CppUnit::TestCaller<TestInteger>::runTest() (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x50568E9: CppUnit::TestCaseMethodFunctor::operator()() const (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5049E33: CppUnit::DefaultProtector::protect(CppUnit::Functor const&, CppUnit::ProtectorContext const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5052E66: CppUnit::ProtectorChain::protect(CppUnit::Functor const&, CppUnit::ProtectorContext const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x505D593: CppUnit::TestResult::protect(CppUnit::Functor const&, CppUnit::Test*, std::string const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5056687: CppUnit::TestCase::run(CppUnit::TestResult*) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5056DC2: CppUnit::TestComposite::doRunChildTests(CppUnit::TestResult*) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5056CE5: CppUnit::TestComposite::run(CppUnit::TestResult*) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x505D1B9: CppUnit::TestResult::runTest(CppUnit::Test*) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==  Address 0x5f303dc is 4 bytes before a block of size 36 alloc'd
+==19509==    at 0x4C27CC1: operator new(unsigned long) (vg_replace_malloc.c:261)
+==19509==    by 0x43FA60: __gnu_cxx::new_allocator<int>::allocate(unsigned long, void const*) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x43E704: std::_Vector_base<int, std::allocator<int> >::_M_allocate(unsigned long) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x43C72E: std::_Vector_base<int, std::allocator<int> >::_Vector_base(unsigned long, std::allocator<int> const&) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x43A3CB: std::vector<int, std::allocator<int> >::vector(unsigned long, int const&, std::allocator<int> const&) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x43D815: std::back_insert_iterator<std::vector<int, std::allocator<int> > > multiplies_digits<__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int const*, std::vector<int, std::allocator<int> > >, std::back_insert_iterator<std::vector<int, std::allocator<int> > > >(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int const*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int const*, std::vector<int, std::allocator<int> > >, std::back_insert_iterator<std::vector<int, std::allocator<int> > >) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x438B73: Integer<int, std::vector<int, std::allocator<int> > >::operator*=(Integer<int, std::vector<int, std::allocator<int> > > const&) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x4197E9: TestInteger::test_times_equals_2() (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x440F23: CppUnit::TestCaller<TestInteger>::runTest() (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x50568E9: CppUnit::TestCaseMethodFunctor::operator()() const (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5049E33: CppUnit::DefaultProtector::protect(CppUnit::Functor const&, CppUnit::ProtectorContext const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5052E66: CppUnit::ProtectorChain::protect(CppUnit::Functor const&, CppUnit::ProtectorContext const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509== 
+==19509== Invalid write of size 4
+==19509==    at 0x43DB49: std::back_insert_iterator<std::vector<int, std::allocator<int> > > multiplies_digits<__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int const*, std::vector<int, std::allocator<int> > >, std::back_insert_iterator<std::vector<int, std::allocator<int> > > >(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int const*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int const*, std::vector<int, std::allocator<int> > >, std::back_insert_iterator<std::vector<int, std::allocator<int> > >) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x438B73: Integer<int, std::vector<int, std::allocator<int> > >::operator*=(Integer<int, std::vector<int, std::allocator<int> > > const&) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x4197E9: TestInteger::test_times_equals_2() (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x440F23: CppUnit::TestCaller<TestInteger>::runTest() (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x50568E9: CppUnit::TestCaseMethodFunctor::operator()() const (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5049E33: CppUnit::DefaultProtector::protect(CppUnit::Functor const&, CppUnit::ProtectorContext const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5052E66: CppUnit::ProtectorChain::protect(CppUnit::Functor const&, CppUnit::ProtectorContext const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x505D593: CppUnit::TestResult::protect(CppUnit::Functor const&, CppUnit::Test*, std::string const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5056687: CppUnit::TestCase::run(CppUnit::TestResult*) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5056DC2: CppUnit::TestComposite::doRunChildTests(CppUnit::TestResult*) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5056CE5: CppUnit::TestComposite::run(CppUnit::TestResult*) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x505D1B9: CppUnit::TestResult::runTest(CppUnit::Test*) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==  Address 0x5f303dc is 4 bytes before a block of size 36 alloc'd
+==19509==    at 0x4C27CC1: operator new(unsigned long) (vg_replace_malloc.c:261)
+==19509==    by 0x43FA60: __gnu_cxx::new_allocator<int>::allocate(unsigned long, void const*) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x43E704: std::_Vector_base<int, std::allocator<int> >::_M_allocate(unsigned long) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x43C72E: std::_Vector_base<int, std::allocator<int> >::_Vector_base(unsigned long, std::allocator<int> const&) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x43A3CB: std::vector<int, std::allocator<int> >::vector(unsigned long, int const&, std::allocator<int> const&) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x43D815: std::back_insert_iterator<std::vector<int, std::allocator<int> > > multiplies_digits<__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int const*, std::vector<int, std::allocator<int> > >, std::back_insert_iterator<std::vector<int, std::allocator<int> > > >(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int const*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int const*, std::vector<int, std::allocator<int> > >, std::back_insert_iterator<std::vector<int, std::allocator<int> > >) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x438B73: Integer<int, std::vector<int, std::allocator<int> > >::operator*=(Integer<int, std::vector<int, std::allocator<int> > > const&) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x4197E9: TestInteger::test_times_equals_2() (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x440F23: CppUnit::TestCaller<TestInteger>::runTest() (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x50568E9: CppUnit::TestCaseMethodFunctor::operator()() const (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5049E33: CppUnit::DefaultProtector::protect(CppUnit::Functor const&, CppUnit::ProtectorContext const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5052E66: CppUnit::ProtectorChain::protect(CppUnit::Functor const&, CppUnit::ProtectorContext const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509== 
+.len1: 5 tempProd.size(): 6
+len1: 5 tempProd.size(): 6
+len1: 5 tempProd.size(): 6
+len1: 5 tempProd.size(): 6
+len1: 5 tempProd.size(): 6
+len1: 5 tempProd.size(): 6
+len1: 5 tempProd.size(): 6
+len1: 5 tempProd.size(): 6
+len1: 5 tempProd.size(): 6
+==19509== Invalid read of size 4
+==19509==    at 0x43DB44: std::back_insert_iterator<std::vector<int, std::allocator<int> > > multiplies_digits<__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int const*, std::vector<int, std::allocator<int> > >, std::back_insert_iterator<std::vector<int, std::allocator<int> > > >(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int const*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int const*, std::vector<int, std::allocator<int> > >, std::back_insert_iterator<std::vector<int, std::allocator<int> > >) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x438B73: Integer<int, std::vector<int, std::allocator<int> > >::operator*=(Integer<int, std::vector<int, std::allocator<int> > > const&) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x419F8D: TestInteger::test_times_equals_3() (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x440F23: CppUnit::TestCaller<TestInteger>::runTest() (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x50568E9: CppUnit::TestCaseMethodFunctor::operator()() const (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5049E33: CppUnit::DefaultProtector::protect(CppUnit::Functor const&, CppUnit::ProtectorContext const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5052E66: CppUnit::ProtectorChain::protect(CppUnit::Functor const&, CppUnit::ProtectorContext const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x505D593: CppUnit::TestResult::protect(CppUnit::Functor const&, CppUnit::Test*, std::string const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5056687: CppUnit::TestCase::run(CppUnit::TestResult*) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5056DC2: CppUnit::TestComposite::doRunChildTests(CppUnit::TestResult*) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5056CE5: CppUnit::TestComposite::run(CppUnit::TestResult*) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x505D1B9: CppUnit::TestResult::runTest(CppUnit::Test*) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==  Address 0x5f335dc is 4 bytes before a block of size 36 alloc'd
+==19509==    at 0x4C27CC1: operator new(unsigned long) (vg_replace_malloc.c:261)
+==19509==    by 0x43FA60: __gnu_cxx::new_allocator<int>::allocate(unsigned long, void const*) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x43E704: std::_Vector_base<int, std::allocator<int> >::_M_allocate(unsigned long) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x43C72E: std::_Vector_base<int, std::allocator<int> >::_Vector_base(unsigned long, std::allocator<int> const&) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x43A3CB: std::vector<int, std::allocator<int> >::vector(unsigned long, int const&, std::allocator<int> const&) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x43D815: std::back_insert_iterator<std::vector<int, std::allocator<int> > > multiplies_digits<__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int const*, std::vector<int, std::allocator<int> > >, std::back_insert_iterator<std::vector<int, std::allocator<int> > > >(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int const*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int const*, std::vector<int, std::allocator<int> > >, std::back_insert_iterator<std::vector<int, std::allocator<int> > >) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x438B73: Integer<int, std::vector<int, std::allocator<int> > >::operator*=(Integer<int, std::vector<int, std::allocator<int> > > const&) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x419F8D: TestInteger::test_times_equals_3() (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x440F23: CppUnit::TestCaller<TestInteger>::runTest() (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x50568E9: CppUnit::TestCaseMethodFunctor::operator()() const (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5049E33: CppUnit::DefaultProtector::protect(CppUnit::Functor const&, CppUnit::ProtectorContext const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5052E66: CppUnit::ProtectorChain::protect(CppUnit::Functor const&, CppUnit::ProtectorContext const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509== 
+==19509== Invalid write of size 4
+==19509==    at 0x43DB49: std::back_insert_iterator<std::vector<int, std::allocator<int> > > multiplies_digits<__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int const*, std::vector<int, std::allocator<int> > >, std::back_insert_iterator<std::vector<int, std::allocator<int> > > >(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int const*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int const*, std::vector<int, std::allocator<int> > >, std::back_insert_iterator<std::vector<int, std::allocator<int> > >) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x438B73: Integer<int, std::vector<int, std::allocator<int> > >::operator*=(Integer<int, std::vector<int, std::allocator<int> > > const&) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x419F8D: TestInteger::test_times_equals_3() (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x440F23: CppUnit::TestCaller<TestInteger>::runTest() (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x50568E9: CppUnit::TestCaseMethodFunctor::operator()() const (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5049E33: CppUnit::DefaultProtector::protect(CppUnit::Functor const&, CppUnit::ProtectorContext const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5052E66: CppUnit::ProtectorChain::protect(CppUnit::Functor const&, CppUnit::ProtectorContext const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x505D593: CppUnit::TestResult::protect(CppUnit::Functor const&, CppUnit::Test*, std::string const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5056687: CppUnit::TestCase::run(CppUnit::TestResult*) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5056DC2: CppUnit::TestComposite::doRunChildTests(CppUnit::TestResult*) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5056CE5: CppUnit::TestComposite::run(CppUnit::TestResult*) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x505D1B9: CppUnit::TestResult::runTest(CppUnit::Test*) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==  Address 0x5f335dc is 4 bytes before a block of size 36 alloc'd
+==19509==    at 0x4C27CC1: operator new(unsigned long) (vg_replace_malloc.c:261)
+==19509==    by 0x43FA60: __gnu_cxx::new_allocator<int>::allocate(unsigned long, void const*) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x43E704: std::_Vector_base<int, std::allocator<int> >::_M_allocate(unsigned long) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x43C72E: std::_Vector_base<int, std::allocator<int> >::_Vector_base(unsigned long, std::allocator<int> const&) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x43A3CB: std::vector<int, std::allocator<int> >::vector(unsigned long, int const&, std::allocator<int> const&) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x43D815: std::back_insert_iterator<std::vector<int, std::allocator<int> > > multiplies_digits<__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int const*, std::vector<int, std::allocator<int> > >, std::back_insert_iterator<std::vector<int, std::allocator<int> > > >(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int const*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int const*, std::vector<int, std::allocator<int> > >, std::back_insert_iterator<std::vector<int, std::allocator<int> > >) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x438B73: Integer<int, std::vector<int, std::allocator<int> > >::operator*=(Integer<int, std::vector<int, std::allocator<int> > > const&) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x419F8D: TestInteger::test_times_equals_3() (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x440F23: CppUnit::TestCaller<TestInteger>::runTest() (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x50568E9: CppUnit::TestCaseMethodFunctor::operator()() const (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5049E33: CppUnit::DefaultProtector::protect(CppUnit::Functor const&, CppUnit::ProtectorContext const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5052E66: CppUnit::ProtectorChain::protect(CppUnit::Functor const&, CppUnit::ProtectorContext const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509== 
+.len1: 5 tempProd.size(): 6
+len1: 5 tempProd.size(): 6
+len1: 5 tempProd.size(): 6
+len1: 5 tempProd.size(): 6
+len1: 5 tempProd.size(): 6
+len1: 5 tempProd.size(): 6
+len1: 5 tempProd.size(): 6
+len1: 5 tempProd.size(): 6
+len1: 5 tempProd.size(): 6
+==19509== Invalid read of size 4
+==19509==    at 0x43DB44: std::back_insert_iterator<std::vector<int, std::allocator<int> > > multiplies_digits<__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int const*, std::vector<int, std::allocator<int> > >, std::back_insert_iterator<std::vector<int, std::allocator<int> > > >(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int const*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int const*, std::vector<int, std::allocator<int> > >, std::back_insert_iterator<std::vector<int, std::allocator<int> > >) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x438B73: Integer<int, std::vector<int, std::allocator<int> > >::operator*=(Integer<int, std::vector<int, std::allocator<int> > > const&) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x41A731: TestInteger::test_times_equals_4() (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x440F23: CppUnit::TestCaller<TestInteger>::runTest() (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x50568E9: CppUnit::TestCaseMethodFunctor::operator()() const (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5049E33: CppUnit::DefaultProtector::protect(CppUnit::Functor const&, CppUnit::ProtectorContext const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5052E66: CppUnit::ProtectorChain::protect(CppUnit::Functor const&, CppUnit::ProtectorContext const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x505D593: CppUnit::TestResult::protect(CppUnit::Functor const&, CppUnit::Test*, std::string const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5056687: CppUnit::TestCase::run(CppUnit::TestResult*) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5056DC2: CppUnit::TestComposite::doRunChildTests(CppUnit::TestResult*) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5056CE5: CppUnit::TestComposite::run(CppUnit::TestResult*) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x505D1B9: CppUnit::TestResult::runTest(CppUnit::Test*) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==  Address 0x5f367dc is 4 bytes before a block of size 36 alloc'd
+==19509==    at 0x4C27CC1: operator new(unsigned long) (vg_replace_malloc.c:261)
+==19509==    by 0x43FA60: __gnu_cxx::new_allocator<int>::allocate(unsigned long, void const*) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x43E704: std::_Vector_base<int, std::allocator<int> >::_M_allocate(unsigned long) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x43C72E: std::_Vector_base<int, std::allocator<int> >::_Vector_base(unsigned long, std::allocator<int> const&) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x43A3CB: std::vector<int, std::allocator<int> >::vector(unsigned long, int const&, std::allocator<int> const&) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x43D815: std::back_insert_iterator<std::vector<int, std::allocator<int> > > multiplies_digits<__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int const*, std::vector<int, std::allocator<int> > >, std::back_insert_iterator<std::vector<int, std::allocator<int> > > >(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int const*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int const*, std::vector<int, std::allocator<int> > >, std::back_insert_iterator<std::vector<int, std::allocator<int> > >) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x438B73: Integer<int, std::vector<int, std::allocator<int> > >::operator*=(Integer<int, std::vector<int, std::allocator<int> > > const&) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x41A731: TestInteger::test_times_equals_4() (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x440F23: CppUnit::TestCaller<TestInteger>::runTest() (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x50568E9: CppUnit::TestCaseMethodFunctor::operator()() const (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5049E33: CppUnit::DefaultProtector::protect(CppUnit::Functor const&, CppUnit::ProtectorContext const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5052E66: CppUnit::ProtectorChain::protect(CppUnit::Functor const&, CppUnit::ProtectorContext const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509== 
+==19509== Invalid write of size 4
+==19509==    at 0x43DB49: std::back_insert_iterator<std::vector<int, std::allocator<int> > > multiplies_digits<__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int const*, std::vector<int, std::allocator<int> > >, std::back_insert_iterator<std::vector<int, std::allocator<int> > > >(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int const*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int const*, std::vector<int, std::allocator<int> > >, std::back_insert_iterator<std::vector<int, std::allocator<int> > >) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x438B73: Integer<int, std::vector<int, std::allocator<int> > >::operator*=(Integer<int, std::vector<int, std::allocator<int> > > const&) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x41A731: TestInteger::test_times_equals_4() (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x440F23: CppUnit::TestCaller<TestInteger>::runTest() (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x50568E9: CppUnit::TestCaseMethodFunctor::operator()() const (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5049E33: CppUnit::DefaultProtector::protect(CppUnit::Functor const&, CppUnit::ProtectorContext const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5052E66: CppUnit::ProtectorChain::protect(CppUnit::Functor const&, CppUnit::ProtectorContext const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x505D593: CppUnit::TestResult::protect(CppUnit::Functor const&, CppUnit::Test*, std::string const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5056687: CppUnit::TestCase::run(CppUnit::TestResult*) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5056DC2: CppUnit::TestComposite::doRunChildTests(CppUnit::TestResult*) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5056CE5: CppUnit::TestComposite::run(CppUnit::TestResult*) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x505D1B9: CppUnit::TestResult::runTest(CppUnit::Test*) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==  Address 0x5f367dc is 4 bytes before a block of size 36 alloc'd
+==19509==    at 0x4C27CC1: operator new(unsigned long) (vg_replace_malloc.c:261)
+==19509==    by 0x43FA60: __gnu_cxx::new_allocator<int>::allocate(unsigned long, void const*) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x43E704: std::_Vector_base<int, std::allocator<int> >::_M_allocate(unsigned long) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x43C72E: std::_Vector_base<int, std::allocator<int> >::_Vector_base(unsigned long, std::allocator<int> const&) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x43A3CB: std::vector<int, std::allocator<int> >::vector(unsigned long, int const&, std::allocator<int> const&) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x43D815: std::back_insert_iterator<std::vector<int, std::allocator<int> > > multiplies_digits<__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int const*, std::vector<int, std::allocator<int> > >, std::back_insert_iterator<std::vector<int, std::allocator<int> > > >(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int const*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int const*, std::vector<int, std::allocator<int> > >, std::back_insert_iterator<std::vector<int, std::allocator<int> > >) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x438B73: Integer<int, std::vector<int, std::allocator<int> > >::operator*=(Integer<int, std::vector<int, std::allocator<int> > > const&) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x41A731: TestInteger::test_times_equals_4() (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x440F23: CppUnit::TestCaller<TestInteger>::runTest() (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x50568E9: CppUnit::TestCaseMethodFunctor::operator()() const (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5049E33: CppUnit::DefaultProtector::protect(CppUnit::Functor const&, CppUnit::ProtectorContext const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5052E66: CppUnit::ProtectorChain::protect(CppUnit::Functor const&, CppUnit::ProtectorContext const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509== 
+.len1: 5 tempProd.size(): 6
+......len1: 2 tempProd.size(): 3
+len1: 2 tempProd.size(): 3
+len1: 2 tempProd.size(): 3
+len1: 2 tempProd.size(): 3
+len1: 2 tempProd.size(): 3
+len1: 2 tempProd.size(): 3
+len1: 2 tempProd.size(): 3
+len1: 2 tempProd.size(): 3
+len1: 2 tempProd.size(): 3
+==19509== Invalid read of size 4
+==19509==    at 0x43DB44: std::back_insert_iterator<std::vector<int, std::allocator<int> > > multiplies_digits<__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int const*, std::vector<int, std::allocator<int> > >, std::back_insert_iterator<std::vector<int, std::allocator<int> > > >(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int const*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int const*, std::vector<int, std::allocator<int> > >, std::back_insert_iterator<std::vector<int, std::allocator<int> > >) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x438B73: Integer<int, std::vector<int, std::allocator<int> > >::operator*=(Integer<int, std::vector<int, std::allocator<int> > > const&) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x43900D: Integer<int, std::vector<int, std::allocator<int> > >::operator%=(Integer<int, std::vector<int, std::allocator<int> > > const&) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x41D9D9: TestInteger::test_mod_equals_1() (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x440F23: CppUnit::TestCaller<TestInteger>::runTest() (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x50568E9: CppUnit::TestCaseMethodFunctor::operator()() const (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5049E33: CppUnit::DefaultProtector::protect(CppUnit::Functor const&, CppUnit::ProtectorContext const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5052E66: CppUnit::ProtectorChain::protect(CppUnit::Functor const&, CppUnit::ProtectorContext const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x505D593: CppUnit::TestResult::protect(CppUnit::Functor const&, CppUnit::Test*, std::string const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5056687: CppUnit::TestCase::run(CppUnit::TestResult*) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5056DC2: CppUnit::TestComposite::doRunChildTests(CppUnit::TestResult*) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5056CE5: CppUnit::TestComposite::run(CppUnit::TestResult*) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==  Address 0x5f5276c is 4 bytes before a block of size 24 alloc'd
+==19509==    at 0x4C27CC1: operator new(unsigned long) (vg_replace_malloc.c:261)
+==19509==    by 0x43FA60: __gnu_cxx::new_allocator<int>::allocate(unsigned long, void const*) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x43E704: std::_Vector_base<int, std::allocator<int> >::_M_allocate(unsigned long) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x43C72E: std::_Vector_base<int, std::allocator<int> >::_Vector_base(unsigned long, std::allocator<int> const&) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x43A3CB: std::vector<int, std::allocator<int> >::vector(unsigned long, int const&, std::allocator<int> const&) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x43D815: std::back_insert_iterator<std::vector<int, std::allocator<int> > > multiplies_digits<__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int const*, std::vector<int, std::allocator<int> > >, std::back_insert_iterator<std::vector<int, std::allocator<int> > > >(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int const*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int const*, std::vector<int, std::allocator<int> > >, std::back_insert_iterator<std::vector<int, std::allocator<int> > >) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x438B73: Integer<int, std::vector<int, std::allocator<int> > >::operator*=(Integer<int, std::vector<int, std::allocator<int> > > const&) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x43900D: Integer<int, std::vector<int, std::allocator<int> > >::operator%=(Integer<int, std::vector<int, std::allocator<int> > > const&) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x41D9D9: TestInteger::test_mod_equals_1() (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x440F23: CppUnit::TestCaller<TestInteger>::runTest() (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x50568E9: CppUnit::TestCaseMethodFunctor::operator()() const (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5049E33: CppUnit::DefaultProtector::protect(CppUnit::Functor const&, CppUnit::ProtectorContext const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509== 
+==19509== Invalid write of size 4
+==19509==    at 0x43DB49: std::back_insert_iterator<std::vector<int, std::allocator<int> > > multiplies_digits<__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int const*, std::vector<int, std::allocator<int> > >, std::back_insert_iterator<std::vector<int, std::allocator<int> > > >(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int const*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int const*, std::vector<int, std::allocator<int> > >, std::back_insert_iterator<std::vector<int, std::allocator<int> > >) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x438B73: Integer<int, std::vector<int, std::allocator<int> > >::operator*=(Integer<int, std::vector<int, std::allocator<int> > > const&) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x43900D: Integer<int, std::vector<int, std::allocator<int> > >::operator%=(Integer<int, std::vector<int, std::allocator<int> > > const&) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x41D9D9: TestInteger::test_mod_equals_1() (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x440F23: CppUnit::TestCaller<TestInteger>::runTest() (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x50568E9: CppUnit::TestCaseMethodFunctor::operator()() const (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5049E33: CppUnit::DefaultProtector::protect(CppUnit::Functor const&, CppUnit::ProtectorContext const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5052E66: CppUnit::ProtectorChain::protect(CppUnit::Functor const&, CppUnit::ProtectorContext const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x505D593: CppUnit::TestResult::protect(CppUnit::Functor const&, CppUnit::Test*, std::string const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5056687: CppUnit::TestCase::run(CppUnit::TestResult*) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5056DC2: CppUnit::TestComposite::doRunChildTests(CppUnit::TestResult*) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5056CE5: CppUnit::TestComposite::run(CppUnit::TestResult*) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==  Address 0x5f5276c is 4 bytes before a block of size 24 alloc'd
+==19509==    at 0x4C27CC1: operator new(unsigned long) (vg_replace_malloc.c:261)
+==19509==    by 0x43FA60: __gnu_cxx::new_allocator<int>::allocate(unsigned long, void const*) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x43E704: std::_Vector_base<int, std::allocator<int> >::_M_allocate(unsigned long) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x43C72E: std::_Vector_base<int, std::allocator<int> >::_Vector_base(unsigned long, std::allocator<int> const&) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x43A3CB: std::vector<int, std::allocator<int> >::vector(unsigned long, int const&, std::allocator<int> const&) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x43D815: std::back_insert_iterator<std::vector<int, std::allocator<int> > > multiplies_digits<__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int const*, std::vector<int, std::allocator<int> > >, std::back_insert_iterator<std::vector<int, std::allocator<int> > > >(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int const*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int const*, std::vector<int, std::allocator<int> > >, std::back_insert_iterator<std::vector<int, std::allocator<int> > >) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x438B73: Integer<int, std::vector<int, std::allocator<int> > >::operator*=(Integer<int, std::vector<int, std::allocator<int> > > const&) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x43900D: Integer<int, std::vector<int, std::allocator<int> > >::operator%=(Integer<int, std::vector<int, std::allocator<int> > > const&) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x41D9D9: TestInteger::test_mod_equals_1() (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x440F23: CppUnit::TestCaller<TestInteger>::runTest() (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x50568E9: CppUnit::TestCaseMethodFunctor::operator()() const (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5049E33: CppUnit::DefaultProtector::protect(CppUnit::Functor const&, CppUnit::ProtectorContext const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509== 
+.len1: 2 tempProd.size(): 3
+len1: 2 tempProd.size(): 3
+len1: 2 tempProd.size(): 3
+len1: 2 tempProd.size(): 3
+len1: 2 tempProd.size(): 3
+len1: 2 tempProd.size(): 3
+len1: 2 tempProd.size(): 3
+len1: 2 tempProd.size(): 3
+len1: 2 tempProd.size(): 3
+==19509== Invalid read of size 4
+==19509==    at 0x43DB44: std::back_insert_iterator<std::vector<int, std::allocator<int> > > multiplies_digits<__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int const*, std::vector<int, std::allocator<int> > >, std::back_insert_iterator<std::vector<int, std::allocator<int> > > >(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int const*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int const*, std::vector<int, std::allocator<int> > >, std::back_insert_iterator<std::vector<int, std::allocator<int> > >) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x438B73: Integer<int, std::vector<int, std::allocator<int> > >::operator*=(Integer<int, std::vector<int, std::allocator<int> > > const&) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x43900D: Integer<int, std::vector<int, std::allocator<int> > >::operator%=(Integer<int, std::vector<int, std::allocator<int> > > const&) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x41E17D: TestInteger::test_mod_equals_2() (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x440F23: CppUnit::TestCaller<TestInteger>::runTest() (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x50568E9: CppUnit::TestCaseMethodFunctor::operator()() const (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5049E33: CppUnit::DefaultProtector::protect(CppUnit::Functor const&, CppUnit::ProtectorContext const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5052E66: CppUnit::ProtectorChain::protect(CppUnit::Functor const&, CppUnit::ProtectorContext const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x505D593: CppUnit::TestResult::protect(CppUnit::Functor const&, CppUnit::Test*, std::string const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5056687: CppUnit::TestCase::run(CppUnit::TestResult*) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5056DC2: CppUnit::TestComposite::doRunChildTests(CppUnit::TestResult*) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5056CE5: CppUnit::TestComposite::run(CppUnit::TestResult*) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==  Address 0x5f589dc is 4 bytes before a block of size 24 alloc'd
+==19509==    at 0x4C27CC1: operator new(unsigned long) (vg_replace_malloc.c:261)
+==19509==    by 0x43FA60: __gnu_cxx::new_allocator<int>::allocate(unsigned long, void const*) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x43E704: std::_Vector_base<int, std::allocator<int> >::_M_allocate(unsigned long) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x43C72E: std::_Vector_base<int, std::allocator<int> >::_Vector_base(unsigned long, std::allocator<int> const&) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x43A3CB: std::vector<int, std::allocator<int> >::vector(unsigned long, int const&, std::allocator<int> const&) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x43D815: std::back_insert_iterator<std::vector<int, std::allocator<int> > > multiplies_digits<__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int const*, std::vector<int, std::allocator<int> > >, std::back_insert_iterator<std::vector<int, std::allocator<int> > > >(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int const*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int const*, std::vector<int, std::allocator<int> > >, std::back_insert_iterator<std::vector<int, std::allocator<int> > >) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x438B73: Integer<int, std::vector<int, std::allocator<int> > >::operator*=(Integer<int, std::vector<int, std::allocator<int> > > const&) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x43900D: Integer<int, std::vector<int, std::allocator<int> > >::operator%=(Integer<int, std::vector<int, std::allocator<int> > > const&) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x41E17D: TestInteger::test_mod_equals_2() (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x440F23: CppUnit::TestCaller<TestInteger>::runTest() (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x50568E9: CppUnit::TestCaseMethodFunctor::operator()() const (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5049E33: CppUnit::DefaultProtector::protect(CppUnit::Functor const&, CppUnit::ProtectorContext const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509== 
+==19509== Invalid write of size 4
+==19509==    at 0x43DB49: std::back_insert_iterator<std::vector<int, std::allocator<int> > > multiplies_digits<__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int const*, std::vector<int, std::allocator<int> > >, std::back_insert_iterator<std::vector<int, std::allocator<int> > > >(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int const*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int const*, std::vector<int, std::allocator<int> > >, std::back_insert_iterator<std::vector<int, std::allocator<int> > >) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x438B73: Integer<int, std::vector<int, std::allocator<int> > >::operator*=(Integer<int, std::vector<int, std::allocator<int> > > const&) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x43900D: Integer<int, std::vector<int, std::allocator<int> > >::operator%=(Integer<int, std::vector<int, std::allocator<int> > > const&) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x41E17D: TestInteger::test_mod_equals_2() (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x440F23: CppUnit::TestCaller<TestInteger>::runTest() (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x50568E9: CppUnit::TestCaseMethodFunctor::operator()() const (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5049E33: CppUnit::DefaultProtector::protect(CppUnit::Functor const&, CppUnit::ProtectorContext const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5052E66: CppUnit::ProtectorChain::protect(CppUnit::Functor const&, CppUnit::ProtectorContext const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x505D593: CppUnit::TestResult::protect(CppUnit::Functor const&, CppUnit::Test*, std::string const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5056687: CppUnit::TestCase::run(CppUnit::TestResult*) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5056DC2: CppUnit::TestComposite::doRunChildTests(CppUnit::TestResult*) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5056CE5: CppUnit::TestComposite::run(CppUnit::TestResult*) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==  Address 0x5f589dc is 4 bytes before a block of size 24 alloc'd
+==19509==    at 0x4C27CC1: operator new(unsigned long) (vg_replace_malloc.c:261)
+==19509==    by 0x43FA60: __gnu_cxx::new_allocator<int>::allocate(unsigned long, void const*) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x43E704: std::_Vector_base<int, std::allocator<int> >::_M_allocate(unsigned long) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x43C72E: std::_Vector_base<int, std::allocator<int> >::_Vector_base(unsigned long, std::allocator<int> const&) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x43A3CB: std::vector<int, std::allocator<int> >::vector(unsigned long, int const&, std::allocator<int> const&) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x43D815: std::back_insert_iterator<std::vector<int, std::allocator<int> > > multiplies_digits<__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int const*, std::vector<int, std::allocator<int> > >, std::back_insert_iterator<std::vector<int, std::allocator<int> > > >(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int const*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int const*, std::vector<int, std::allocator<int> > >, std::back_insert_iterator<std::vector<int, std::allocator<int> > >) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x438B73: Integer<int, std::vector<int, std::allocator<int> > >::operator*=(Integer<int, std::vector<int, std::allocator<int> > > const&) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x43900D: Integer<int, std::vector<int, std::allocator<int> > >::operator%=(Integer<int, std::vector<int, std::allocator<int> > > const&) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x41E17D: TestInteger::test_mod_equals_2() (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x440F23: CppUnit::TestCaller<TestInteger>::runTest() (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x50568E9: CppUnit::TestCaseMethodFunctor::operator()() const (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5049E33: CppUnit::DefaultProtector::protect(CppUnit::Functor const&, CppUnit::ProtectorContext const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509== 
+.len1: 1 tempProd.size(): 2
+len1: 1 tempProd.size(): 2
+len1: 1 tempProd.size(): 2
+len1: 1 tempProd.size(): 2
+len1: 1 tempProd.size(): 2
+len1: 1 tempProd.size(): 2
+len1: 1 tempProd.size(): 2
+len1: 1 tempProd.size(): 2
+len1: 1 tempProd.size(): 2
+==19509== Invalid read of size 4
+==19509==    at 0x43DB44: std::back_insert_iterator<std::vector<int, std::allocator<int> > > multiplies_digits<__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int const*, std::vector<int, std::allocator<int> > >, std::back_insert_iterator<std::vector<int, std::allocator<int> > > >(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int const*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int const*, std::vector<int, std::allocator<int> > >, std::back_insert_iterator<std::vector<int, std::allocator<int> > >) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x438B73: Integer<int, std::vector<int, std::allocator<int> > >::operator*=(Integer<int, std::vector<int, std::allocator<int> > > const&) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x43900D: Integer<int, std::vector<int, std::allocator<int> > >::operator%=(Integer<int, std::vector<int, std::allocator<int> > > const&) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x41E921: TestInteger::test_mod_equals_3() (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x440F23: CppUnit::TestCaller<TestInteger>::runTest() (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x50568E9: CppUnit::TestCaseMethodFunctor::operator()() const (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5049E33: CppUnit::DefaultProtector::protect(CppUnit::Functor const&, CppUnit::ProtectorContext const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5052E66: CppUnit::ProtectorChain::protect(CppUnit::Functor const&, CppUnit::ProtectorContext const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x505D593: CppUnit::TestResult::protect(CppUnit::Functor const&, CppUnit::Test*, std::string const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5056687: CppUnit::TestCase::run(CppUnit::TestResult*) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5056DC2: CppUnit::TestComposite::doRunChildTests(CppUnit::TestResult*) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5056CE5: CppUnit::TestComposite::run(CppUnit::TestResult*) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==  Address 0x5f5c89c is 4 bytes before a block of size 20 alloc'd
+==19509==    at 0x4C27CC1: operator new(unsigned long) (vg_replace_malloc.c:261)
+==19509==    by 0x43FA60: __gnu_cxx::new_allocator<int>::allocate(unsigned long, void const*) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x43E704: std::_Vector_base<int, std::allocator<int> >::_M_allocate(unsigned long) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x43C72E: std::_Vector_base<int, std::allocator<int> >::_Vector_base(unsigned long, std::allocator<int> const&) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x43A3CB: std::vector<int, std::allocator<int> >::vector(unsigned long, int const&, std::allocator<int> const&) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x43D815: std::back_insert_iterator<std::vector<int, std::allocator<int> > > multiplies_digits<__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int const*, std::vector<int, std::allocator<int> > >, std::back_insert_iterator<std::vector<int, std::allocator<int> > > >(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int const*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int const*, std::vector<int, std::allocator<int> > >, std::back_insert_iterator<std::vector<int, std::allocator<int> > >) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x438B73: Integer<int, std::vector<int, std::allocator<int> > >::operator*=(Integer<int, std::vector<int, std::allocator<int> > > const&) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x43900D: Integer<int, std::vector<int, std::allocator<int> > >::operator%=(Integer<int, std::vector<int, std::allocator<int> > > const&) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x41E921: TestInteger::test_mod_equals_3() (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x440F23: CppUnit::TestCaller<TestInteger>::runTest() (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x50568E9: CppUnit::TestCaseMethodFunctor::operator()() const (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5049E33: CppUnit::DefaultProtector::protect(CppUnit::Functor const&, CppUnit::ProtectorContext const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509== 
+==19509== Invalid write of size 4
+==19509==    at 0x43DB49: std::back_insert_iterator<std::vector<int, std::allocator<int> > > multiplies_digits<__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int const*, std::vector<int, std::allocator<int> > >, std::back_insert_iterator<std::vector<int, std::allocator<int> > > >(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int const*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int const*, std::vector<int, std::allocator<int> > >, std::back_insert_iterator<std::vector<int, std::allocator<int> > >) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x438B73: Integer<int, std::vector<int, std::allocator<int> > >::operator*=(Integer<int, std::vector<int, std::allocator<int> > > const&) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x43900D: Integer<int, std::vector<int, std::allocator<int> > >::operator%=(Integer<int, std::vector<int, std::allocator<int> > > const&) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x41E921: TestInteger::test_mod_equals_3() (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x440F23: CppUnit::TestCaller<TestInteger>::runTest() (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x50568E9: CppUnit::TestCaseMethodFunctor::operator()() const (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5049E33: CppUnit::DefaultProtector::protect(CppUnit::Functor const&, CppUnit::ProtectorContext const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5052E66: CppUnit::ProtectorChain::protect(CppUnit::Functor const&, CppUnit::ProtectorContext const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x505D593: CppUnit::TestResult::protect(CppUnit::Functor const&, CppUnit::Test*, std::string const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5056687: CppUnit::TestCase::run(CppUnit::TestResult*) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5056DC2: CppUnit::TestComposite::doRunChildTests(CppUnit::TestResult*) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5056CE5: CppUnit::TestComposite::run(CppUnit::TestResult*) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==  Address 0x5f5c89c is 4 bytes before a block of size 20 alloc'd
+==19509==    at 0x4C27CC1: operator new(unsigned long) (vg_replace_malloc.c:261)
+==19509==    by 0x43FA60: __gnu_cxx::new_allocator<int>::allocate(unsigned long, void const*) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x43E704: std::_Vector_base<int, std::allocator<int> >::_M_allocate(unsigned long) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x43C72E: std::_Vector_base<int, std::allocator<int> >::_Vector_base(unsigned long, std::allocator<int> const&) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x43A3CB: std::vector<int, std::allocator<int> >::vector(unsigned long, int const&, std::allocator<int> const&) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x43D815: std::back_insert_iterator<std::vector<int, std::allocator<int> > > multiplies_digits<__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int const*, std::vector<int, std::allocator<int> > >, std::back_insert_iterator<std::vector<int, std::allocator<int> > > >(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int const*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int const*, std::vector<int, std::allocator<int> > >, std::back_insert_iterator<std::vector<int, std::allocator<int> > >) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x438B73: Integer<int, std::vector<int, std::allocator<int> > >::operator*=(Integer<int, std::vector<int, std::allocator<int> > > const&) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x43900D: Integer<int, std::vector<int, std::allocator<int> > >::operator%=(Integer<int, std::vector<int, std::allocator<int> > > const&) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x41E921: TestInteger::test_mod_equals_3() (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x440F23: CppUnit::TestCaller<TestInteger>::runTest() (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x50568E9: CppUnit::TestCaseMethodFunctor::operator()() const (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5049E33: CppUnit::DefaultProtector::protect(CppUnit::Functor const&, CppUnit::ProtectorContext const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509== 
+......................len1: 1 tempProd.size(): 2
+4
+.len1: 1 tempProd.size(): 2
+len1: 1 tempProd.size(): 2
+8
+.len1: 1 tempProd.size(): 2
+len1: 1 tempProd.size(): 2
+len1: 1 tempProd.size(): 2
+len1: 2 tempProd.size(): 3
+len1: 2 tempProd.size(): 3
+len1: 2 tempProd.size(): 3
+len1: 2 tempProd.size(): 3
+len1: 2 tempProd.size(): 3
+len1: 2 tempProd.size(): 3
+len1: 2 tempProd.size(): 3
+len1: 2 tempProd.size(): 3
+len1: 2 tempProd.size(): 3
+==19509== Invalid read of size 4
+==19509==    at 0x43DB44: std::back_insert_iterator<std::vector<int, std::allocator<int> > > multiplies_digits<__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int const*, std::vector<int, std::allocator<int> > >, std::back_insert_iterator<std::vector<int, std::allocator<int> > > >(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int const*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int const*, std::vector<int, std::allocator<int> > >, std::back_insert_iterator<std::vector<int, std::allocator<int> > >) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x438B73: Integer<int, std::vector<int, std::allocator<int> > >::operator*=(Integer<int, std::vector<int, std::allocator<int> > > const&) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x43F705: operator*(Integer<int, std::vector<int, std::allocator<int> > >, Integer<int, std::vector<int, std::allocator<int> > > const&) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x43E2A4: Integer<int, std::vector<int, std::allocator<int> > >::pow(Integer<int, std::vector<int, std::allocator<int> > > const&, int) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x43E27A: Integer<int, std::vector<int, std::allocator<int> > >::pow(Integer<int, std::vector<int, std::allocator<int> > > const&, int) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x439754: Integer<int, std::vector<int, std::allocator<int> > >::pow(int) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x42AB61: TestInteger::test_pow_5() (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x440F23: CppUnit::TestCaller<TestInteger>::runTest() (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x50568E9: CppUnit::TestCaseMethodFunctor::operator()() const (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5049E33: CppUnit::DefaultProtector::protect(CppUnit::Functor const&, CppUnit::ProtectorContext const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5052E66: CppUnit::ProtectorChain::protect(CppUnit::Functor const&, CppUnit::ProtectorContext const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x505D593: CppUnit::TestResult::protect(CppUnit::Functor const&, CppUnit::Test*, std::string const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==  Address 0x5f8293c is 4 bytes before a block of size 16 alloc'd
+==19509==    at 0x4C27CC1: operator new(unsigned long) (vg_replace_malloc.c:261)
+==19509==    by 0x43FA60: __gnu_cxx::new_allocator<int>::allocate(unsigned long, void const*) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x43E704: std::_Vector_base<int, std::allocator<int> >::_M_allocate(unsigned long) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x43C72E: std::_Vector_base<int, std::allocator<int> >::_Vector_base(unsigned long, std::allocator<int> const&) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x43A3CB: std::vector<int, std::allocator<int> >::vector(unsigned long, int const&, std::allocator<int> const&) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x43D815: std::back_insert_iterator<std::vector<int, std::allocator<int> > > multiplies_digits<__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int const*, std::vector<int, std::allocator<int> > >, std::back_insert_iterator<std::vector<int, std::allocator<int> > > >(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int const*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int const*, std::vector<int, std::allocator<int> > >, std::back_insert_iterator<std::vector<int, std::allocator<int> > >) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x438B73: Integer<int, std::vector<int, std::allocator<int> > >::operator*=(Integer<int, std::vector<int, std::allocator<int> > > const&) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x43F705: operator*(Integer<int, std::vector<int, std::allocator<int> > >, Integer<int, std::vector<int, std::allocator<int> > > const&) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x43E2A4: Integer<int, std::vector<int, std::allocator<int> > >::pow(Integer<int, std::vector<int, std::allocator<int> > > const&, int) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x43E27A: Integer<int, std::vector<int, std::allocator<int> > >::pow(Integer<int, std::vector<int, std::allocator<int> > > const&, int) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x439754: Integer<int, std::vector<int, std::allocator<int> > >::pow(int) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x42AB61: TestInteger::test_pow_5() (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509== 
+==19509== Invalid write of size 4
+==19509==    at 0x43DB49: std::back_insert_iterator<std::vector<int, std::allocator<int> > > multiplies_digits<__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int const*, std::vector<int, std::allocator<int> > >, std::back_insert_iterator<std::vector<int, std::allocator<int> > > >(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int const*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int const*, std::vector<int, std::allocator<int> > >, std::back_insert_iterator<std::vector<int, std::allocator<int> > >) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x438B73: Integer<int, std::vector<int, std::allocator<int> > >::operator*=(Integer<int, std::vector<int, std::allocator<int> > > const&) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x43F705: operator*(Integer<int, std::vector<int, std::allocator<int> > >, Integer<int, std::vector<int, std::allocator<int> > > const&) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x43E2A4: Integer<int, std::vector<int, std::allocator<int> > >::pow(Integer<int, std::vector<int, std::allocator<int> > > const&, int) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x43E27A: Integer<int, std::vector<int, std::allocator<int> > >::pow(Integer<int, std::vector<int, std::allocator<int> > > const&, int) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x439754: Integer<int, std::vector<int, std::allocator<int> > >::pow(int) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x42AB61: TestInteger::test_pow_5() (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x440F23: CppUnit::TestCaller<TestInteger>::runTest() (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x50568E9: CppUnit::TestCaseMethodFunctor::operator()() const (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5049E33: CppUnit::DefaultProtector::protect(CppUnit::Functor const&, CppUnit::ProtectorContext const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x5052E66: CppUnit::ProtectorChain::protect(CppUnit::Functor const&, CppUnit::ProtectorContext const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==    by 0x505D593: CppUnit::TestResult::protect(CppUnit::Functor const&, CppUnit::Test*, std::string const&) (in /usr/lib/libcppunit-1.12.so.1.0.0)
+==19509==  Address 0x5f8293c is 4 bytes before a block of size 16 alloc'd
+==19509==    at 0x4C27CC1: operator new(unsigned long) (vg_replace_malloc.c:261)
+==19509==    by 0x43FA60: __gnu_cxx::new_allocator<int>::allocate(unsigned long, void const*) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x43E704: std::_Vector_base<int, std::allocator<int> >::_M_allocate(unsigned long) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x43C72E: std::_Vector_base<int, std::allocator<int> >::_Vector_base(unsigned long, std::allocator<int> const&) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x43A3CB: std::vector<int, std::allocator<int> >::vector(unsigned long, int const&, std::allocator<int> const&) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x43D815: std::back_insert_iterator<std::vector<int, std::allocator<int> > > multiplies_digits<__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int const*, std::vector<int, std::allocator<int> > >, std::back_insert_iterator<std::vector<int, std::allocator<int> > > >(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int const*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int const*, std::vector<int, std::allocator<int> > >, std::back_insert_iterator<std::vector<int, std::allocator<int> > >) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x438B73: Integer<int, std::vector<int, std::allocator<int> > >::operator*=(Integer<int, std::vector<int, std::allocator<int> > > const&) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x43F705: operator*(Integer<int, std::vector<int, std::allocator<int> > >, Integer<int, std::vector<int, std::allocator<int> > > const&) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x43E2A4: Integer<int, std::vector<int, std::allocator<int> > >::pow(Integer<int, std::vector<int, std::allocator<int> > > const&, int) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x43E27A: Integer<int, std::vector<int, std::allocator<int> > >::pow(Integer<int, std::vector<int, std::allocator<int> > > const&, int) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x439754: Integer<int, std::vector<int, std::allocator<int> > >::pow(int) (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509==    by 0x42AB61: TestInteger::test_pow_5() (in /v/filer4b/v38q001/robby35u/cs378-integer/TestInteger.c++.app)
+==19509== 
+len1: 4 tempProd.size(): 5
+len1: 4 tempProd.size(): 5
+len1: 4 tempProd.size(): 5
+len1: 4 tempProd.size(): 5
+len1: 4 tempProd.size(): 5
+len1: 4 tempProd.size(): 5
+len1: 4 tempProd.size(): 5
+len1: 4 tempProd.size(): 5
+len1: 4 tempProd.size(): 5
+len1: 8 tempProd.size(): 9
+.len1: 1 tempProd.size(): 2
+len1: 1 tempProd.size(): 2
+len1: 2 tempProd.size(): 3
+len1: 2 tempProd.size(): 3
+len1: 2 tempProd.size(): 3
+len1: 2 tempProd.size(): 3
+len1: 2 tempProd.size(): 3
+len1: 2 tempProd.size(): 3
+len1: 2 tempProd.size(): 3
+len1: 2 tempProd.size(): 3
+len1: 2 tempProd.size(): 3
+len1: 3 tempProd.size(): 4
+len1: 3 tempProd.size(): 4
+len1: 3 tempProd.size(): 4
+len1: 3 tempProd.size(): 4
+len1: 3 tempProd.size(): 4
+len1: 3 tempProd.size(): 4
+len1: 3 tempProd.size(): 4
+len1: 3 tempProd.size(): 4
+len1: 3 tempProd.size(): 4
+len1: 6 tempProd.size(): 7
+len1: 6 tempProd.size(): 7
+len1: 6 tempProd.size(): 7
+len1: 6 tempProd.size(): 7
+len1: 6 tempProd.size(): 7
+len1: 6 tempProd.size(): 7
+len1: 6 tempProd.size(): 7
+len1: 6 tempProd.size(): 7
+len1: 6 tempProd.size(): 7
+len1: 12 tempProd.size(): 13
+len1: 12 tempProd.size(): 13
+len1: 12 tempProd.size(): 13
+len1: 12 tempProd.size(): 13
+len1: 12 tempProd.size(): 13
+len1: 12 tempProd.size(): 13
+len1: 12 tempProd.size(): 13
+len1: 12 tempProd.size(): 13
+len1: 12 tempProd.size(): 13
+len1: 12 tempProd.size(): 13
+len1: 24 tempProd.size(): 25
+len1: 24 tempProd.size(): 25
+len1: 24 tempProd.size(): 25
+len1: 24 tempProd.size(): 25
+len1: 24 tempProd.size(): 25
+len1: 24 tempProd.size(): 25
+len1: 24 tempProd.size(): 25
+len1: 24 tempProd.size(): 25
+len1: 24 tempProd.size(): 25
+
+
+
+OK (106 tests)
+
+
+Done.
+==19509== 
+==19509== HEAP SUMMARY:
+==19509==     in use at exit: 122,880 bytes in 6 blocks
+==19509==   total heap usage: 16,774 allocs, 16,768 frees, 878,498 bytes allocated
+==19509== 
+==19509== LEAK SUMMARY:
+==19509==    definitely lost: 0 bytes in 0 blocks
+==19509==    indirectly lost: 0 bytes in 0 blocks
+==19509==      possibly lost: 0 bytes in 0 blocks
+==19509==    still reachable: 122,880 bytes in 6 blocks
+==19509==         suppressed: 0 bytes in 0 blocks
+==19509== Rerun with --leak-check=full to see details of leaked memory
+==19509== 
+==19509== For counts of detected and suppressed errors, rerun with: -v
+==19509== Use --track-origins=yes to see where uninitialised values come from
+==19509== ERROR SUMMARY: 58 errors from 30 contexts (suppressed: 4 from 4)
